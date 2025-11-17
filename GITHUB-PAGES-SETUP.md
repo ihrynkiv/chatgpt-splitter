@@ -4,14 +4,16 @@
 
 ### Step 1: Create GitHub Repository
 1. Go to [github.com](https://github.com) and create a new repository
-2. Name it: `chatgpt-export-splitter` (or any name you prefer)
+2. Name it: `chatgpt-splitter` (⚠️ **Important**: Use this exact name or update `vite.config.js`)
 3. Make it **Public** (required for free GitHub Pages)
 4. Don't initialize with README (we already have files)
+
+**📝 Note**: The repository name becomes part of your URL. If you use a different name, update the `base` path in `vite.config.js` to match.
 
 ### Step 2: Push Your Code
 ```bash
 # In your project folder, run these commands:
-git remote add origin https://github.com/YOUR_USERNAME/chatgpt-export-splitter.git
+git remote add origin https://github.com/YOUR_USERNAME/chatgpt-splitter.git
 git branch -M main
 git push -u origin main
 ```
