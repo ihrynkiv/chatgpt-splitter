@@ -1,0 +1,74 @@
+[
+  {
+    "title": "Цикличність та аналіз стану",
+    "current_node": "node3",
+    "mapping": {
+      "node1": {
+        "id": "node1",
+        "parent": null,
+        "children": ["node2"],
+        "message": {
+          "id": "msg1",
+          "author": {"role": "system"},
+          "content": {"content_type": "text", "parts": ["System message"]}
+        }
+      },
+      "node2": {
+        "id": "node2", 
+        "parent": "node1",
+        "children": ["node3"],
+        "message": {
+          "id": "msg2",
+          "author": {"role": "user"},
+          "content": {"content_type": "text", "parts": ["Hello, how are you?"]}
+        }
+      },
+      "node3": {
+        "id": "node3",
+        "parent": "node2", 
+        "children": [],
+        "message": {
+          "id": "msg3",
+          "author": {"role": "assistant"},
+          "content": {"content_type": "text", "parts": ["Hello! I'm doing well, thank you for asking. How can I help you today?"]}
+        }
+      }
+    }
+  },
+  {
+    "title": "Technical Discussion",
+    "current_node": "node6", 
+    "mapping": {
+      "node4": {
+        "id": "node4",
+        "parent": null,
+        "children": ["node5"],
+        "message": {
+          "id": "msg4",
+          "author": {"role": "user"},
+          "content": {"content_type": "text", "parts": ["What is React?"]}
+        }
+      },
+      "node5": {
+        "id": "node5",
+        "parent": "node4",
+        "children": ["node6"],
+        "message": {
+          "id": "msg5", 
+          "author": {"role": "assistant"},
+          "content": {"content_type": "text", "parts": ["React is a popular JavaScript library for building user interfaces. It was developed by Facebook and is widely used for creating interactive web applications."]}
+        }
+      },
+      "node6": {
+        "id": "node6",
+        "parent": "node5",
+        "children": [],
+        "message": {
+          "id": "msg6",
+          "author": {"role": "user"}, 
+          "content": {"content_type": "text", "parts": ["Can you give me an example?"]}
+        }
+      }
+    }
+  }
+]
